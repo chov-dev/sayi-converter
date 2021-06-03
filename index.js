@@ -1,5 +1,3 @@
-const { window } = require("globalthis/implementation");
-
 let normalTextarea = document.querySelector(".normal-textarea")
 let sayiTextarea = document.querySelector(".sayi-textarea")
 let normalTextareaChangerEventHandler = undefined;
