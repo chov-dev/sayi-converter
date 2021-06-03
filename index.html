@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sayi converter</title>
+    <style>
+        ::selection {
+            color: #7289da;
+            background: #575757;
+            opacity: 100%;
+        }
+
+        html {
+            background-color: #23272a;
+        }
+
+        body {
+            width: fit-content;
+            height: fit-content;
+            margin: 0px;
+        }
+
+        .app {
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #23272a;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .spliter {
+            width: 100%;
+            height: 5px;
+            border-radius: 5px;
+            background-color: #36393F;
+            margin: 15px 0px;
+        }
+
+        .section-container {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            box-sizing: border-box;
+            background-color: #36393F;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .section__title {
+            width: fit-content;
+            height: fit-content;
+            padding: 5px 10px;
+            background-color: #23272a;
+            border-radius: 7px;
+            font-size: 25px;
+            margin-bottom: 10px;
+            color: #7289da;
+        }
+
+        .section__input {
+            width: 500px;
+            height: 250px;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: #23272a;
+            border: none;
+            color: #ced9ff;
+            font-size: 20px;
+            caret-color: #7289da;
+            resize: none;
+        }
+
+        .section__input:focus {
+            outline: none;
+        }
+
+        span {
+            color: #7289da;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <div class="section-container">
+            <div class="section__title">일반어 (UTF-8)</div>
+            <textarea class="section__input normal-textarea" placeholder="일반어를 입력하십시오"></textarea>
+        </div>
+        <div class="spliter"></div>
+        <div class="section-container">
+            <div class="section__title">ㅇㅅ어 (Binary)</div>
+            <textarea class="section__input sayi-textarea" placeholder="ㅇㅅ어를 입력하십시오"></textarea>
+        </div>
+        <div class="spliter"></div>
+        <span>© chov-dev. All rights reserved.</span>
+        <div class="spliter"></div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>

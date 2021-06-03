@@ -1,0 +1,14 @@
+{
+  "name": "sayi-converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node electron .app.js"
+  },
+  "author": "chov-dev",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^13.0.1"
+  }
+}
