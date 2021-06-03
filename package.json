@@ -2,9 +2,9 @@
   "name": "sayi-converter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node electron .app.js"
+    "start": "electron app.js"
   },
   "author": "chov-dev",
   "license": "ISC",

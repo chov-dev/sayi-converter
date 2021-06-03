@@ -3,6 +3,8 @@ let sayiTextarea = document.querySelector(".sayi-textarea")
 let normalTextareaChangerEventHandler = undefined;
 let sayiTextareaChangerEventHandler = undefined;
 
+const {ipcRenderer} = require("electron")
+
 const utf8ToBinary = (utf8) =>{
     let arr = [];
     for (let i = 0; i < utf8.length; i++) {
@@ -65,4 +67,11 @@ sayiTextarea.addEventListener("focus", (event)=>{
             })
         }
     }
+})
+
+
+
+document.querySelector(".quit-button").addEventListener("click", ()=>{
+    console.log("thisda")
+    ipcRenderer.send('close-me')
 })
