@@ -1,9 +1,12 @@
+const { window } = require("globalthis/implementation");
+
 let normalTextarea = document.querySelector(".normal-textarea")
 let sayiTextarea = document.querySelector(".sayi-textarea")
 let normalTextareaChangerEventHandler = undefined;
 let sayiTextareaChangerEventHandler = undefined;
 
-const {ipcRenderer} = require("electron")
+try{const {ipcRenderer} = require("electron")}
+catch{}
 
 const utf8ToBinary = (utf8) =>{
     let arr = [];
@@ -73,5 +76,6 @@ sayiTextarea.addEventListener("focus", (event)=>{
 
 document.querySelector(".quit-button").addEventListener("click", ()=>{
     console.log("thisda")
-    ipcRenderer.send('close-me')
+    try{ipcRenderer.send('close-me')}
+    catch{window.close()}
 })
