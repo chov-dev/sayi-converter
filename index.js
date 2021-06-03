@@ -19,11 +19,11 @@ const binaryToUtf8 = (binary) =>{
     let binaryArr = binary.split(" ")
     let isContainOther = false
     let nowIndex = 0
-    console.log(binary)
     while(!isContainOther && nowIndex < binary.length){
         if(binary[nowIndex] === "0"){nowIndex++}
         else if(binary[nowIndex] === "1"){nowIndex++}
         else if(binary[nowIndex] === " "){nowIndex++}
+        else if(binary[nowIndex] === ""){nowIndex++}
         else if(binary[nowIndex] === ""){nowIndex++}
         else isContainOther = true
     }
