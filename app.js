@@ -1,5 +1,7 @@
 const { app, BrowserWindow } = require("electron");
-const {ipcMain} = require("electron")
+const { window } = require("globalthis/implementation");
+try{const {ipcMain} = require("electron");}
+catch{}
 
 let win;
 
@@ -18,6 +20,11 @@ app.on("window-all-closed", () => { if (process.platform !== "darwin") { app.qui
 app.on("activate", () => { if (win === null) { createWindow();
 } });
 
+try{
 ipcMain.on('close-me', (evt, arg) => {
     app.quit()
   })
+}
+catch{
+    window.close()
+}
