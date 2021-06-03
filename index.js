@@ -24,7 +24,8 @@ const binaryToUtf8 = (binary) =>{
         else if(binary[nowIndex] === "1"){nowIndex++}
         else if(binary[nowIndex] === " "){nowIndex++}
         else if(binary[nowIndex] === ""){nowIndex++}
-        else if(binary[nowIndex] === ""){nowIndex++}
+        else if(binary[nowIndex] === `
+`){nowIndex++}
         else isContainOther = true
     }
     if(!isContainOther){
