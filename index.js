@@ -23,7 +23,6 @@ const binaryToUtf8 = (binary) =>{
         if(binary[nowIndex] === "0"){nowIndex++}
         else if(binary[nowIndex] === "1"){nowIndex++}
         else if(binary[nowIndex] === " "){nowIndex++}
-        else if(binary[nowIndex] === ""){nowIndex++}
         else if(binary[nowIndex] === `
 `){nowIndex++}
         else isContainOther = true
@@ -74,7 +73,6 @@ sayiTextarea.addEventListener("focus", (event)=>{
 
 
 document.querySelector(".quit-button").addEventListener("click", ()=>{
-    console.log("thisda")
     try{ipcRenderer.send('close-me')}
     catch{window.close()}
 })
